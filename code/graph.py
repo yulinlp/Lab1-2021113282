@@ -3,7 +3,6 @@ import re
 import random
 import graphviz
 
-
 class Graph:
     def __init__(self) -> None:
         self.graph_dict = {}
