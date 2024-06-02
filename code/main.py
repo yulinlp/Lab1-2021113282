@@ -8,8 +8,6 @@ from graph import WordGraph
 # modify on B1
 
 def cli():
-    txt = input("输入文本: ")
-    graph = WordGraph(txt)
     while True:
         choice = int(input("""
 操作列表: 
