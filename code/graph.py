@@ -223,6 +223,7 @@ class WordGraph:
             f.write(txt)
         return txt
 
+# modify on B1
 
 if __name__ == "__main__":
     # string = 'To explore strange new worlds,\nTo seek out new life and new civilizations'

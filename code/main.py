@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 from graph import WordGraph
-
+# modify on B1
 
 def cli():
     txt = input("输入文本: ")
