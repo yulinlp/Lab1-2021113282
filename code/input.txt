@@ -1,0 +1,30 @@
+def _dijkstra(self, from_v):
+        dijkstra_data = {
+            v: {
+                'visited': False, 
+                'distance': float('inf'), 
+                'prev': None
+            } for v in self.graph_dict.keys()
+        }
+        dijkstra_data[from_v]['distance'] = 0
+        while True:
+            lowest_dis = float('inf')
+            lowest_v = None
+            for v in self.graph_dict.keys():
+                if dijkstra_data[v]['visited']:
+                    continue
+                if dijkstra_data[v]['distance'] < lowest_dis:
+                    lowest_dis = dijkstra_data[v]['distance']
+                    lowest_v = v
+            if lowest_v is None:
+                break
+            dijkstra_data[lowest_v]['visited'] = True
+            if all([d['visited'] for d in dijkstra_data.values()]):
+                break
+            for v, weight in self.graph_dict[lowest_v].items():
+                if dijkstra_data[v]['visited']:
+                    continue
+                if lowest_dis + weight < dijkstra_data[v]['distance']:
+                    dijkstra_data[v]['distance'] = lowest_dis + weight
+                    dijkstra_data[v]['prev'] = lowest_v
+        return dijkstra_data
