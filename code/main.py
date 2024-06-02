@@ -6,8 +6,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 from graph import WordGraph
 
-# modify on B2
-
+# modify by IDE
 def cli():
     while True:
         choice = int(input("""
