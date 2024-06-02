@@ -3,6 +3,7 @@ import re
 import random
 import graphviz
 
+# modify on B2
 class Graph:
     def __init__(self) -> None:
         self.graph_dict = {}
