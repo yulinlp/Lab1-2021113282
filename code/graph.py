@@ -222,16 +222,3 @@ class WordGraph:
         with open(os.path.join('output', 'walk.txt'), 'w+') as f:
             f.write(txt)
         return txt
-
-
-if __name__ == "__main__":
-    # string = 'To explore strange new worlds,\nTo seek out new life and new civilizations'
-    string = 'a to b a from b a go b a back b c d e'
-    g=WordGraph(string)
-    print(g)
-    g.showDirectedGraph()
-    print(g.queryBridgeWords('a', 'b'))
-    print(g.generateNewText('a b a b a b a b'))
-    print(g.calcShortestPath('c','e'))
-    print(g.calcShortestPathAll('d'))
-    print(g.randomWalk())
